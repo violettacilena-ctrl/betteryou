@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tantangan Harian - BetterYou</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg main-header sticky-top bg-white py-3 px-md-5">
+    <div class="container-fluid">
+      <span class="brand-name navbar-brand fw-bold fs-4">BetterYou.</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a href="index.html" class="nav-link fw-semibold">Beranda</a></li>
+          <li class="nav-item"><a href="tracker.html" class="nav-link fw-semibold">Habit Tracker</a></li>
+          <li class="nav-item"><a href="artikel.html" class="nav-link fw-semibold" >Kesehatan Mental</a></li>
+          <li class="nav-item"><a href="tantangan.html" class="nav-link current fw-semibold">Tantangan Harian</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="mental-banner py-5 px-md-5">
+    <div class="container text-center py-4">
+      <span class="mental-tagline d-inline-block mb-2">Level Up Your Life</span>
+      <h1 class="mental-title fw-extrabold mb-3">Tantangan Harian</h1>
+      <p class="tracker-subtitle mx-auto text-muted mb-0" style="max-width: 700px;">
+        Dorong dirimu keluar dari zona nyaman dengan tantangan kecil yang berdampak besar bagi pertumbuhan mental dan fisikmu. Ambil misimu hari ini!
+      </p>
+    </div>
+  </section>
+
+  <main id="halaman-utama" class="container py-5">
+    <div class="row g-4 justify-content-center">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="article-card h-100 p-0 rounded-4 overflow-hidden border">
+          <div class="article-img-box">
+            <img src="img/Kesehatan Mental.jpg" alt="Detoks Media Sosial" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+          </div>
+          <div class="article-content-box p-4">
+            <span class="article-category badge bg-light text-dark mb-2">Kesehatan Mental</span>
+            <h3 class="article-heading fw-bold fs-5 mb-2">Detoks Media Sosial 24 Jam</h3>
+            <p class="article-summary text-muted small mb-4">Berani lepaskan gawai selama seharian penuh? Temukan kembali ketenangan pikiran tanpa gangguan notifikasi dan perbandingan sosial harian.</p>
+            <button class="btn-read-more" onclick="bukaHalaman('isi-tantangan-1')">Lihat Tantangan &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="article-card h-100 p-0 rounded-4 overflow-hidden border">
+          <div class="article-img-box">
+            <img src="img/AKtivitas Fisik.jpg" alt="Gerak Aktif 10000 Langkah" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+          </div>
+          <div class="article-content-box p-4">
+            <span class="article-category badge bg-light text-dark mb-2">Aktivitas Fisik</span>
+            <h3 class="article-heading fw-bold fs-5 mb-2">Gerak Aktif: 10.000 Langkah</h3>
+            <p class="article-summary text-muted small mb-4">Tingkatkan energi dan suasana hati dengan tantangan berjalan kaki. Aktivitas sederhana ini terbukti ampuh mengurangi stres harian.</p>
+            <button class="btn-read-more" onclick="bukaHalaman('isi-tantangan-2')">Lihat Tantangan &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="article-card h-100 p-0 rounded-4 overflow-hidden border">
+          <div class="article-img-box">
+            <img src="img/Sosial.jpg" alt="Kebaikan Tanpa Nama" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+          </div>
+          <div class="article-content-box p-4">
+            <span class="article-category badge bg-light text-dark mb-2">Sosial</span>
+            <h3 class="article-heading fw-bold fs-5 mb-2">Satu Kebaikan Tanpa Nama</h3>
+            <p class="article-summary text-muted small mb-4">Lakukan satu hal baik untuk orang lain hari ini tanpa memberitahu siapa pun. Kebaikan kecil bisa memberikan kebahagiaan yang besar.</p>
+            <button class="btn-read-more" onclick="bukaHalaman('isi-tantangan-3')">Lihat Tantangan &rarr;</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <section id="halaman-detail-artikel" class="container py-5" style="display: none;">
+    <div class="mb-4">
+      <button class="btn-back btn border fw-medium px-4 py-2" onclick="kembaliKeDaftar()">&larr; Kembali ke Semua Tantangan</button>
+    </div>
+
+    <div id="isi-tantangan-1" class="full-article-content-box bg-white p-4 p-md-5 rounded-4 border" style="display: none;">
+      <h2 class="detail-title fw-bold mb-2">Detoks Media Sosial 24 Jam</h2>
+      <div class="detail-meta text-muted small mb-4">Kategori: Mental Health • Tingkat: Menantang</div>
+      <p class="detail-paragraph text-muted">Tantangan ini mengajak Anda untuk benar-benar hadir di dunia nyata. Sering kali, kita merasa cemas karena terus membandingkan hidup kita dengan apa yang kita lihat di layar digital.</p>
+      <p class="detail-paragraph text-muted"><strong>Cara Melakukan:</strong><br>Matikan semua notifikasi media sosial atau hapus aplikasinya sementara selama 24 jam. Gunakan waktu luang untuk membaca buku, berjalan-jalan, atau mengobrol langsung dengan keluarga tanpa ada gawai di tangan.</p>
+      <button class="cta-button btn mt-3" onclick="terimaTantangan(this)">Terima Tantangan Ini</button>
+    </div>
+
+    <div id="isi-tantangan-2" class="full-article-content-box bg-white p-4 p-md-5 rounded-4 border" style="display: none;">
+      <h2 class="detail-title fw-bold mb-2">Gerak Aktif: 10.000 Langkah</h2>
+      <div class="detail-meta text-muted small mb-4">Kategori: Fisik • Tingkat: Sedang</div>
+      <p class="detail-paragraph text-muted">Tubuh yang bergerak aktif akan memicu hormon kebahagiaan. 10.000 langkah adalah target ideal harian untuk menjaga kesehatan jantung serta metabolisme tubuh tetap prima.</p>
+      <p class="detail-paragraph text-muted"><strong>Cara Melakukan:</strong><br>Gunakan aplikasi pedometer di ponsel Anda. Pilihlah jalan kaki saat pergi ke tempat yang dekat, gunakan tangga alih-alih lift, dan sempatkan berkeliling di sekitar lingkungan rumah pada sore hari.</p>
+      <button class="cta-button btn mt-3" onclick="terimaTantangan(this)">Terima Tantangan Ini</button>
+    </div>
+
+    <div id="isi-tantangan-3" class="full-article-content-box bg-white p-4 p-md-5 rounded-4 border" style="display: none;">
+      <h2 class="detail-title fw-bold mb-2">Satu Kebaikan Tanpa Nama</h2>
+      <div class="detail-meta text-muted small mb-4">Kategori: Sosial • Tingkat: Mudah</div>
+      <p class="detail-paragraph text-muted">Berbuat baik secara anonim mengajarkan kita tentang arti ketulusan yang murni. Ini bukan tentang mengejar pujian, melainkan tentang dampak positif yang kita berikan kepada orang lain.</p>
+      <p class="detail-paragraph text-muted"><strong>Cara Melakukan:</strong><br>Bisa sesederhana memberikan tip lebih kepada kurir pengantar makanan, merapikan barang yang berantakan di tempat umum, atau meninggalkan pesan penyemangat di meja teman secara diam-diam.</p>
+      <button class="cta-button btn mt-3" onclick="terimaTantangan(this)">Terima Tantangan Ini</button>
+    </div>
+  </section>
+
+  <footer class="main-footer py-5 px-md-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-6">
+          <div class="footer-logo fw-bold fs-4 mb-3">BetterYou.</div>
+          <p class="footer-about text-muted mb-4" style="max-width: 450px;">
+            Platform pengembangan diri dan pola hidup sehat yang dirancang khusus untuk membantu remaja membangun konsistensi harian.
+          </p>
+          <p class="footer-address text-muted small mb-2">
+            <i class="fa-solid fa-location-dot me-2 text-secondary"></i>Jl. Pemuda No. 45, Kompleks Pendidikan, Blok C, Jakarta Pusat, Indonesia
+          </p>
+          <p class="footer-contact text-muted small mb-0">
+            <i class="fa-solid fa-phone me-2 text-secondary"></i>+62 812-3456-7890 &nbsp;|&nbsp; 
+            <i class="fa-solid fa-envelope me-2 text-secondary"></i>support@betteryou.com
+          </p>
+        </div>
+        
+        <div class="col-md-3">
+          <h4 class="footer-heading fw-bold mb-3 fs-6">Navigasi Cepat</h4>
+          <ul class="list-unstyled d-flex flex-column gap-2 footer-contact-list">
+            <li><a href="index.html" class="text-decoration-none"><i class="fa-solid fa-angle-right me-2"></i>Beranda</a></li>
+            <li><a href="tracker.html" class="text-decoration-none"><i class="fa-solid fa-angle-right me-2"></i>Habit Tracker</a></li>
+            <li><a href="artikel.html" class="text-decoration-none"><i class="fa-solid fa-angle-right me-2"></i>Kesehatan Mental</a></li>
+            <li><a href="tantangan.html" class="text-decoration-none"><i class="fa-solid fa-angle-right me-2"></i>Tantangan Harian</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3">
+          <h4 class="footer-heading fw-bold mb-3 fs-6">Media Sosial</h4>
+          <div class="d-flex gap-2 footer-social-links-icons list-unstyled">
+            <li><a href="https://tiktok.com/username" class="social-icon-btn"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://facebook.com/username" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/username" class="social-icon-btn"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://instagram.com/username" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a></li>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-4 mt-4 border-top text-muted small footer-bottom">
+        &copy; 2026 BetterYou Project. Hak Cipta Dilindungi. Fokus Pada Pertumbuhan Diri Remaja
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
