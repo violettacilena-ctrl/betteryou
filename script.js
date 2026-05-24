@@ -1,16 +1,15 @@
-// 1. BERANDA & TANTANGAN
+// 1. TOMBOL BERANDA & TANTANGAN
 function handleChallenge() {
   const btn = document.getElementById('acceptChallengeBtn');
-  btn.innerHTML = btn.classList.toggle('accepted') ? 'Tantangan Diikuti' : 'Ikuti Tantangan';
+  btn.innerHTML = btn.classList.toggle('accepted') ? 'Diikuti' : 'Ikuti Tantangan';
 }
 
 function terimaTantangan(btn) {
-  btn.innerText = "Tantangan Diterima!";
-  btn.style.backgroundColor = "#111111";
-  alert("Tantangan dimulai! Selesaikan dalam 24 jam.");
+  btn.innerText = "Diterima!";
+  alert("Tantangan dimulai!");
 }
 
-// 2. HABIT TRACKER (OTOMATIS & MOTIVASI)
+// 2. HABIT TRACKER (HITUNG OTOMATIS & 3 MOTIVASI PENDEK)
 function toggleHabit(btn) {
   btn.innerText = btn.closest('.habit-card').classList.toggle('checked-done') ? "Selesai" : "Tandai Selesai";
   
@@ -22,25 +21,17 @@ function toggleHabit(btn) {
   document.getElementById('progressBarFill').innerText = pct + '%';
   document.getElementById('doneCount').innerText = done;
 
-  const quotes = [
-    '"Mulai centang hari ini!"', // 0%
-    '"Awal yang bagus, pertahankan!"', // 1-25%
-    '"Sudah setengah jalan, konsisten!"', // 26-50%
-    '"Keren, sedikit lagi tercapai!"', // 51-75%
-    '"Jangan kasih kendor!"', // 76-99%
-    '"Luar biasa, semua selesai!"' // 100%
-  ];
-  const idx = pct === 0 ? 0 : pct <= 25 ? 1 : pct <= 50 ? 2 : pct <= 75 ? 3 : pct < 100 ? 4 : 5;
-  document.getElementById('motivationQuote').innerHTML = quotes[idx];
+  // Dipangkas jadi 3 tingkat motivasi pendek agar kodingan hemat tempat
+  const teks = pct === 0 ? '"Yuk mulai!"' : pct < 100 ? '"Pertahankan!"' : '"Luar biasa, selesai!"';
+  document.getElementById('motivationQuote').innerHTML = teks;
 }
 
-// 3. NAVIGASI ARTIKEL
+// 3. NAVIGASI PINDAH HALAMAN (ARTIKEL)
 function bukaHalaman(idTarget) {
   document.getElementById('halaman-utama').style.display = 'none';
   document.getElementById('halaman-detail-artikel').style.display = 'block';
   document.querySelectorAll('.full-article-content-box').forEach(box => box.style.display = 'none');
   document.getElementById(idTarget).style.display = 'block';
-  window.scrollTo(0, 0);
 }
 
 const bukaArtikel = (id) => bukaHalaman(id);
@@ -48,5 +39,4 @@ const bukaArtikel = (id) => bukaHalaman(id);
 function kembaliKeDaftar() {
   document.getElementById('halaman-detail-artikel').style.display = 'none';
   document.getElementById('halaman-utama').style.display = 'block';
-  window.scrollTo(0, 0);
 }
