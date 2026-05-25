@@ -21,7 +21,7 @@
         <ul class="navbar-nav gap-3">
           <li class="nav-item"><a href="index.html" class="nav-link fw-semibold">Beranda</a></li>
           <li class="nav-item"><a href="tracker.html" class="nav-link current fw-semibold">Habit Tracker</a></li>
-          <li class="nav-item"><a href="artikel.html" class="nav-link fw-semibold" >Kesehatan Mental</a></li>
+          <li class="nav-item"><a href="artikel.html" class="nav-link fw-semibold">Kesehatan Mental</a></li>
           <li class="nav-item"><a href="tantangan.html" class="nav-link fw-semibold">Tantangan Harian</a></li>
         </ul>
       </div>
@@ -33,120 +33,92 @@
       <span class="tracker-tagline d-inline-block mb-2">Track Your Progress</span>
       <h1 class="tracker-title fw-extrabold mb-3">Lembar Pantauan Kebiasaan</h1>
       <p class="tracker-subtitle mx-auto text-muted mb-0" style="max-width: 700px;">
-        Perubahan besar dimulai dari konsistensi kecil setiap hari. Tandai aktivitas sehat yang sudah kamu selesaikan hari ini dan lihat perkembangan dirimu!
+        Perubahan besar dimulai dari konsistensi kecil setiap hari. Tandai aktivitas sehat yang sudah kamu selesaikan hari ini!
       </p>
     </div>
   </section>
 
   <main class="container py-5">
     <div class="row justify-content-center g-4">
-      
       <div class="col-lg-8">
         
         <div class="category-divider mb-4">
           <h3 class="category-title fw-bold mb-0">Kesehatan Fisik</h3>
         </div>
 
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
+        <div class="habit-card p-4 mb-3 rounded-4 border d-flex justify-content-between align-items-center">
           <div>
             <h4 class="habit-name fw-bold mb-1 fs-5">Hidrasi Sehat</h4>
-            <p class="habit-desc text-muted mb-0">Minum air putih minimal 2 liter (8 gelas) sehari.</p>
+            <p class="habit-desc text-muted mb-0">Minum air putih minimal 2 liter sehari.</p>
           </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
+          <input type="checkbox" class="form-check-input p-2">
         </div>
 
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
+        <div class="habit-card p-4 mb-3 rounded-4 border d-flex justify-content-between align-items-center">
           <div>
             <h4 class="habit-name fw-bold mb-1 fs-5">Istirahat Cukup</h4>
-            <p class="habit-desc text-muted mb-0">Tidur malam minimal 7-8 jam untuk memulihkan energi.</p>
+            <p class="habit-desc text-muted mb-0">Tidur malam minimal 7-8 jam.</p>
           </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
+          <input type="checkbox" class="form-check-input p-2">
         </div>
 
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
+        <div class="habit-card p-4 mb-3 rounded-4 border d-flex justify-content-between align-items-center">
           <div>
             <h4 class="habit-name fw-bold mb-1 fs-5">Gerak Aktif</h4>
-            <p class="habit-desc text-muted mb-0">Melakukan peregangan atau olahraga ringan selama 15 menit.</p>
+            <p class="habit-desc text-muted mb-0">Olahraga ringan selama 15 menit.</p>
           </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
-        </div>
-
-        <div class="habit-card p-4 mb-4 rounded-4 d-flex justify-content-between align-items-center gap-3">
-          <div>
-            <h4 class="habit-name fw-bold mb-1 fs-5">Nutrisi Seimbang</h4>
-            <p class="habit-desc text-muted mb-0">Mengonsumsi buah atau sayur dalam menu makan hari ini.</p>
-          </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
+          <input type="checkbox" class="form-check-input p-2">
         </div>
 
         <div class="category-divider my-4">
           <h3 class="category-title fw-bold mb-0">Pengembangan Diri</h3>
         </div>
 
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
+        <div class="habit-card p-4 mb-3 rounded-4 border d-flex justify-content-between align-items-center">
           <div>
             <h4 class="habit-name fw-bold mb-1 fs-5">Membaca Buku</h4>
-            <p class="habit-desc text-muted mb-0">Membaca buku non-fiksi atau edukatif minimal 15 menit.</p>
+            <p class="habit-desc text-muted mb-0">Membaca buku non-fiksi selama 15 menit.</p>
           </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
+          <input type="checkbox" class="form-check-input p-2">
         </div>
 
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
+        <div class="habit-card p-4 mb-3 rounded-4 border d-flex justify-content-between align-items-center">
           <div>
             <h4 class="habit-name fw-bold mb-1 fs-5">Journaling Malam</h4>
-            <p class="habit-desc text-muted mb-0">Menulis 3 hal yang kamu syukuri hari ini sebelum tidur.</p>
+            <p class="habit-desc text-muted mb-0">Menulis 3 hal yang disyukuri hari ini.</p>
           </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
-        </div>
-
-        <div class="habit-card p-4 mb-3 rounded-4 d-flex justify-content-between align-items-center gap-3">
-          <div>
-            <h4 class="habit-name fw-bold mb-1 fs-5">Manajemen Waktu</h4>
-            <p class="habit-desc text-muted mb-0">Membuat daftar tugas sekolah atau kegiatan untuk esok hari.</p>
-          </div>
-          <button class="habit-btn text-nowrap" onclick="toggleHabit(this)">Tandai Selesai</button>
+          <input type="checkbox" class="form-check-input p-2">
         </div>
 
       </div>
 
       <div class="col-lg-4">
-        <div class="progress-zone p-4 rounded-4 sticky-top" style="top: 100px; z-index: 10;">
-          <h3 class="fw-bold fs-5 mb-2">Progres Hari Ini</h3>
-          <p id="motivationQuote" class="motivation-quote text-muted mb-4">"Disiplin adalah jembatan antara cita-cita dan pencapaian. Yuk mulai cetang hari ini!"</p>
-          
-          <div class="progress-bar-container w-100 rounded-5 mb-3" style="height: 26px;">
-            <div id="progressBarFill" class="progress-bar-fill text-end pe-3 fw-bold rounded-5" style="width: 0%; height: 100%;">
-              0%
-            </div>
-          </div>
-
-          <p class="progress-status-text text-muted mb-0">
-            Kamu telah menyelesaikan <span id="doneCount" class="fw-bold">0</span> dari <span id="totalCount" class="fw-bold">7</span> habit!
-          </p>
+        <div class="progress-zone p-4 rounded-4 border bg-light sticky-top" style="top: 100px;">
+          <h3 class="fw-bold fs-5 mb-2">Catatan Harian</h3>
+          <p class="text-muted small">Tandai checkbox di samping kiri saat kamu selesai melakukan habit tersebut. Konsistensi adalah kunci!</p>
+          <hr>
+          <p class="text-muted small mb-0">Semangat membangun versi terbaik dirimu!</p>
         </div>
       </div>
-
     </div>
   </main>
 
-  <footer class="main-footer py-5 px-md-5">
+ <footer class="main-footer py-5 px-md-5">
     <div class="container">
       <div class="row g-4">
-        
         <div class="col-lg-6">
           <div class="footer-logo fw-bold fs-4 mb-3">BetterYou.</div>
           <p class="footer-about text-muted mb-4" style="max-width: 450px;">
             Platform pengembangan diri dan pola hidup sehat yang dirancang khusus untuk membantu remaja membangun konsistensi harian.
           </p>
           <p class="footer-address text-muted small mb-2">
-            <i class="fa-solid fa-location-dot me-2 text-secondary"></i>Jl. Pemuda No. 45, Kompleks Pendidikan, Blok C, Jakarta Pusat, Indonesia
+            <i class="fa-solid fa-location-dot me-2 text-secondary"></i>Jl. Denger Lagu Jadi Inget Kamu No. 29, Kompleks Cloudy Night, Blok A, Indonesia
           </p>
           <p class="footer-contact text-muted small mb-0">
             <i class="fa-solid fa-phone me-2 text-secondary"></i>+62 812-3456-7890 &nbsp;|&nbsp; 
             <i class="fa-solid fa-envelope me-2 text-secondary"></i>support@betteryou.com
           </p>
         </div>
-        
         <div class="col-md-3">
           <h4 class="footer-heading fw-bold mb-3 fs-6">Navigasi Cepat</h4>
           <ul class="list-unstyled d-flex flex-column gap-2 footer-contact-list">
@@ -156,7 +128,6 @@
             <li><a href="tantangan.html" class="text-decoration-none"><i class="fa-solid fa-angle-right me-2"></i>Tantangan Harian</a></li>
           </ul>
         </div>
-        
         <div class="col-md-3">
           <h4 class="footer-heading fw-bold mb-3 fs-6">Media Sosial</h4>
           <div class="d-flex gap-2 footer-social-links-icons list-unstyled">
@@ -166,9 +137,7 @@
             <li><a href="https://instagram.com/username" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a></li>
           </div>
         </div>
-
       </div>
-
       <div class="text-center pt-4 mt-4 border-top text-muted small footer-bottom">
         &copy; 2026 BetterYou Project. Hak Cipta Dilindungi. Fokus Pada Pertumbuhan Diri Remaja
       </div>
@@ -176,6 +145,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
