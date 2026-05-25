@@ -21,7 +21,7 @@ function toggleHabit(btn) {
   document.getElementById('progressBarFill').innerText = pct + '%';
   document.getElementById('doneCount').innerText = done;
 
-  // Dipangkas jadi 3 tingkat motivasi pendek agar kodingan hemat tempat
+  // motivasi pendek
   const teks = pct === 0 ? '"Yuk mulai!"' : pct < 100 ? '"Pertahankan!"' : '"Luar biasa, selesai!"';
   document.getElementById('motivationQuote').innerHTML = teks;
 }
